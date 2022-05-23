@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset att="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://lookiero.co.uk/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://lookiero.co.uk/help-and-contact/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lookiero.co.uk/terms-and-conds/</loc>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://lookiero.co.uk/blog/</loc>
+    <lastmod>2019-06-27T12:30:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+</urlset>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="pr">
+  <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- OneTrust Cookies Consent Notice start -->
+    {{{oneTrust}}}
+    <script type="text/javascript">
+      function OptanonWrapper() {}
+    </script>
+    <style>
+      .ot-pc-footer-logo {
+        display: none;
+      }
+      #onetrust-consent-sdk {
+        font-family: 'Founders Grotesk';
+      }
+    </style>
+    <!-- OneTrust Cookies Consent Notice end -->
+
+    <!-- fonts.css -->
+    
+    <!-- connect to domain of font files -->
+    <link rel="preconnect" href="%REACT_APP_ASSETS_COMMONS_PATH%/fonts/fonts.css" crossorigin>
+
+    <!-- optionally increase loading priority -->
+    <link rel="preload" as="style" href="%REACT_APP_ASSETS_COMMONS_PATH%/fonts/fonts.css">
+
+    <!-- async CSS -->
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="%REACT_APP_ASSETS_COMMONS_PATH%/fonts/fonts.css">
+
+    <!-- no-JS fallback -->
+    <noscript>
+        <link rel="stylesheet" href="%REACT_APP_ASSETS_COMMONS_PATH%/fonts/fonts.css">
+    </noscript>
+
+    <!-- End fonts.css -->
+
+    <script type="text/javascript">
+      // Duration in milliseconds to wait while the Kameleoon application file is loaded
+      var kameleoonLoadingTimeout = 1000;
+      window.kameleoonQueue = window.kameleoonQueue || [];
+      window.kameleoonStartLoadTime = new Date().getTime();
+      if (navigator.userAgent !== 'ReactSnap' && !document.getElementById('kameleoonLoadingStyleSheet')) {
+        var kameleoonS = document.getElementsByTagName('script')[0];
+        var kameleoonCc = '* { visibility: hidden !important; background-image: none !important; }';
+        var kameleoonStn = document.createElement('style');
+        kameleoonStn.type = 'text/css';
+        kameleoonStn.id = 'kameleoonLoadingStyleSheet';
+        if (kameleoonStn.styleSheet) {
+          kameleoonStn.styleSheet.cssText = kameleoonCc;
+        } else {
+          kameleoonStn.appendChild(document.createTextNode(kameleoonCc));
+        }
+        kameleoonS.parentNode.insertBefore(kameleoonStn, kameleoonS);
+      }
+      window.kameleoonDisplayPage = function (fromEngine) {
+        var kameleoonStn = document.getElementById('kameleoonLoadingStyleSheet');
+        if (!fromEngine) {
+          window.kameleoonTimeout = true;
+        }
+        if (kameleoonStn && kameleoonStn.parentNode) {
+          kameleoonStn.parentNode.removeChild(kameleoonStn);
+        }
+      };
+      window.kameleoonDisplayPageTimeOut = window.setTimeout(window.kameleoonDisplayPage, kameleoonLoadingTimeout);
+    </script>
+
+    <link rel="preload" href="//%REACT_APP_KAMALEOON%.kameleoon.eu/kameleoon.js" as="script" />
+    <script type="text/javascript" src="//%REACT_APP_KAMALEOON%.kameleoon.eu/kameleoon.js" async="true"></script>
+
+    <!-- Anti-flicker snippet (recommended)  -->
+    <style>
+      .async-hide {
+        opacity: 0 !important;
+      }
+    </style>
+    <script type="text/javascript">
+      (function (a, s, y, n, c, h, i, d, e) {
+        s.className += ' ' + y;
+        h.start = 1 * new Date();
+        h.end = i = function () {
+          s.className = s.className.replace(RegExp(' ?' + y), '');
+        };
+        (a[n] = a[n] || []).hide = h;
+        setTimeout(function () {
+          i();
+          h.end = null;
+        }, c);
+        h.timeout = c;
+      })(window, document.documentElement, 'async-hide', 'dataLayer', 4000, {
+        'GTM-TCSLJW8': true,
+      });
+    </script>
+
+
+    <!-- optimize.js -->
+    <script
+      type="text/javascript"
+      src="https://www.googleoptimize.com/optimize.js?id=GTM-TCSLJW8"
+      onerror="dataLayer.hide.end && dataLayer.hide.end()"
+    ></script>
+
+    <!-- Google Analytics -->
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
+    <!-- Google Tag Manager -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      if (navigator.userAgent !== 'ReactSnap') {
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js',
+          });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', '%REACT_APP_GTM_CONTAINER_ID%');
+      }
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="icon" href="%REACT_APP_ASSETS_COMMONS_PATH%/favicon/favicon.ico" />
+    <meta name="viewport" content="initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  </head>
+
+  <body>
+    <noscript
+      >You need to enable JavaScript to run this app.
+      <style>
+        .pr .main-content {
+          opacity: 1;
+        }
+      </style>
+    </noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
