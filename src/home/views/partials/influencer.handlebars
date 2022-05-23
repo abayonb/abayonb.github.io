@@ -1,0 +1,12 @@
+<!--swiper-slide swiper-slide-active-->
+<div class="influencer-card {{cardStyle}}" >
+  <div class="influencers-slider__header">
+    <div class="avatar-wrapper">
+      {{> lazy-image id=(concat id "_avatar") classes="displayBlock" height="32" width="32" }}
+    </div>
+    <strong class="text detail level-2">{{name}}</strong>
+  </div>
+  {{> lazy-image id=id classes="displayBlock" height="360" width="288" }}
+</div>
+
+

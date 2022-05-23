@@ -1,0 +1,4 @@
+const IMAGES_URL = `${process.env.REACT_APP_ASSETS_PATH}/images`;
+const ASSETS_COMMONS_URL = `${process.env.REACT_APP_ASSETS_COMMONS_PATH}`;
+
+export {IMAGES_URL, ASSETS_COMMONS_URL};

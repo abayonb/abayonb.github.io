@@ -1,0 +1,44 @@
+<footer class="footer-home footer-home_padding marginTopLayoutL">
+  <aside class="follow-us flexDirectionColumn justifyContentBetween marginBottomLayoutM wide" align="center">
+    <p class="text action level-3 colorBase marginBottomLayoutXS upperCase textAlignCenter">{{translate "home.followus"}}</p>
+    <nav class="follow-us__links marginTopXXS">
+      <a class="text body level-3 link colorContent displayBlock" target="_blank" rel="noopener noreferrer" aria-label="facebook" href="{{translate "social.facebook.url"}}">
+        {{> lazy-image id="social-facebook" width="24" height="24" }}
+      </a>
+      <a class="text body level-3 link follow-us__link colorContent displayBlock" target="_blank" rel="noopener noreferrer" aria-label="instagram" href="{{translate "social.instagram.url"}}">
+        {{> lazy-image id="social-instagram" width="24" height="24" }}
+      </a>
+      <a class="text body level-3 link follow-us__link colorContent displayBlock" target="_blank" rel="noopener noreferrer" aria-label="tiktok" href="{{translate "social.tiktok.url"}}">
+         {{> lazy-image id="social-tiktok" width="24" height="24" }}
+      </a>
+      <a class="text body level-3 link follow-us__link colorContent displayBlock" target="_blank" rel="noopener noreferrer" aria-label="pinterest" href="{{translate "social.pinterest.url"}}">
+         {{> lazy-image id="social-pinterest" width="24" height="24" }}
+      </a>
+      <a class="text body level-3 link follow-us__link colorContent displayBlock" target="_blank" rel="noopener noreferrer" aria-label="twitter" href="{{translate "social.twitter.url"}}">
+         {{> lazy-image id="social-twitter" width="24" height="24" }}
+      </a>
+    </nav>
+  </aside>
+  <aside class="layout L flexDirectionColumn justifyContentBetween marginTopXXS wide" align="center">
+    <p class="text action level-3 colorBase marginBottomLayoutXS upperCase textAlignCenter">{{translate "home.weaccept"}}</p>
+    <div class="payment-methods__image">
+      <div class="box container-payment_image wide">
+        {{> lazy-image id="payment-visa" width="48" height="32" }}
+      </div>
+      <div class="box container-payment_image marginLeftS wide">
+         {{> lazy-image id="payment-mastercard" width="48" height="32" }}
+      </div>
+      <div class="box container-payment_image marginLeftS wide">
+        {{> lazy-image id="payment-paypal" width="48" height="32" }}
+      </div>
+      <div class="box container-payment_image marginLeftS wide">
+         {{> lazy-image id="payment-american" width="48" height="32" }}
+      </div>
+      {{#if (isInCountry 'fr' ) }}
+        <div class="box container-payment_image marginLeftS wide">
+          {{> lazy-image id="payment-cartes" width="48" height="32" }}
+        </div>
+      {{/if}}
+    </div>
+  </aside>
+</footer>

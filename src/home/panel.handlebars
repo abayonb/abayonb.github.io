@@ -1,0 +1,72 @@
+<aside class="panel panel-side-right displayFlex layerXL positionFixed wide panel__wrapper" aria-hidden="true"
+       id="lk-panel">
+  <section class="motion panel__motion bgInfo layerL positionRelative wide" id="panel"
+           style="left: 0px; transform: translateX(0%); transition-property: left, transform;">
+    <div class="swiper right layerXS positionAbsolute"></div>
+    <header
+        class="header alignItemsCenter bgInfo displayFlex flexDirectionRow paddingRightM paddingLeftM positionRelative wide">
+      {{> header-logo}}
+      <div class="header__actions alignItemsCenter displayFlex flexDirectionRow">
+        <div role="button" class="button" id="panel-button-close">
+          <i class="icon auroraicons close displayBlock" aria-hidden="true"></i>
+        </div>
+      </div>
+    </header>
+    <div class="panel-content-container layout column panel-content S justifyContentBetween wide">
+      <div class="panel-content-container__inner box menu wide">
+        <div class="menu menu--panel">
+          <ul class="marginBottomLayoutM paddingTopLayoutL">
+            <li class="displayFlex justifyContentCenter">
+              <a class="text action level-3 link colorContent upperCase" target="_blank"
+                 href="https://lookiero.{{getCountryDomain}}/blog/">
+                {{{translate "navigation.menu.blog"}}}
+              </a>
+            </li>
+            {{#if (getCountryConfig "giftcardAvailable")}}
+              <li class="displayFlex justifyContentCenter marginTopLayoutXS">
+                <a class="text action level-3 link colorContent upperCase" target="_blank" href="/giftcard/">
+                  {{{translate "navigation.menu.giftCard"}}}
+                </a>
+              </li>
+            {{/if}}
+            <li class="displayFlex justifyContentCenter marginTopLayoutXS">
+              <a class="navigation-link" href="/help-and-contact/">
+                <span class="text action level-3 upperCase">
+                  {{{translate "navigation.menu.help"}}}
+                </span>
+              </a>
+            </li>
+            <li class="displayFlex justifyContentCenter marginTopLayoutXS">
+              <a class="navigation-link" href="/terms-and-conds/">
+                <span class="text action level-3 upperCase">
+                  {{{translate "navigation.menu.tc"}}}
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        {{> button id="panel-create-profile-button" text="navigation.start.cta"}}
+        <div class="marginTopLayoutM" align="center">
+          <span class="text body level-3 displayBlock marginBottomLayoutXXS">
+          {{{translate "navigation.menu.question"}}}
+          </span>
+          <div role="button" id="panel-login-button"
+              class="button button-outlined button--atom outlined small fit bgBase bcContent marginBottomLayoutM paddingRightM paddingLeftM positionRelative">
+            <div class="touchable touchable small layerS positionAbsolute">
+              <div class="motion expand ripple bgTouchable pointerNone"
+                   style="opacity: 0; transition-property: opacity;"></div>
+            </div>
+            <div
+                class="alignItemsCenter displayFlex flexXS flexDirectionRow justifyContentCenter layerS pointerNone positionRelative">
+              <span class="text action level-3 colorContent pointerNone upperCase">
+                {{{translate "navigation.menu.login"}}} 
+              </span>
+            </div>
+            <div class="motion busy small bgGrayscaleXL pointerNone positionAbsolute"
+                 style="width: 0%; transition-property: width;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</aside>

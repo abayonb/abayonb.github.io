@@ -1,0 +1,116 @@
+:root {
+  --wysigyg: var(--space-s, 1rem);
+  --wysigyg__h3-font: var(--font-action-2);
+  --wysigyg__h3-letter-spacing: var(--font-action-2-letter-spacing, 0);
+  --wysigyg__h3-color: var(--color-content, #000);
+
+  --wysigyg__text-font: var(--font-detail-1);
+  --wysigyg__text-letter-spacing: var(--font-detail-1-letter-spacing, 0);
+  --wysigyg__text-color: var(--color-content, #000);
+
+  --wysigyg__th-font: var(--font-detail-3);
+  --wysigyg__th-letter-spacing: var(--font-detail-3-letter-spacing, 0);
+  --wysigyg__th-color: var(--color-content, #000);
+
+  --wysigyg__td-font: var(--font-detail-2);
+  --wysigyg__td-letter-spacing: var(--font-detail-2-letter-spacing, 0);
+  --wysigyg__td-color: var(--color-content, #000);
+
+  --wysigyg--blocks-margin-bottom: var(--space-m, 16px);
+  --wysigyg--blocks-table-padding: var(--space-s, 8px);
+  --wysigyg--blocks-table-border-color: var(--color-grayscale-s, #e7e7e7);
+  --wysigyg--blocks-table-border-size: 1px;
+  --wysigyg--blocks-table-border-style: solid;
+  --wysigyg--blocks-table-font-size: 14px;
+  --wysigyg--blocks-table-margin-top: var(--space-l, 24px);
+  --wysigyg--blocks-list-padding-left: 18px;
+}
+
+.aurora .wysigyg {
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+
+  & * {
+    font: var(--wysigyg__text-font);
+    letter-spacing: var(--wysigyg__text-letter-spacing);
+    color: var(--wysigyg__text-color);
+  }
+
+  & strong {
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  & h3 {
+    font: var(--wysigyg__h3-font);
+    letter-spacing: var(--wysigyg__h3-letter-spacing);
+    color: var(--wysigyg__h3-color);
+    margin-bottom: var(--layout-s);
+    text-transform: uppercase;
+  }
+  & p,
+  & li,
+  & th,
+  & td,
+  & a {
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+  }
+  & a {
+    text-decoration: underline;
+  }
+  & p,
+  & li,
+  & table {
+    margin-bottom: var(--wysigyg--blocks-margin-bottom);
+  }
+
+  & table,
+  & th,
+  & td {
+    border: var(--wysigyg--blocks-table-border-size) var(--wysigyg--blocks-table-border-style)
+      var(--wysigyg--blocks-table-border-color);
+    border-collapse: collapse;
+    padding: var(--wysigyg--blocks-table-padding);
+    font-size: var(--wysigyg--blocks-table-font-size);
+  }
+  & th {
+    font: var(--wysigyg__th-font);
+    letter-spacing: var(--wysigyg__th-letter-spacing);
+    color: var(--wysigyg__th-color);
+    text-transform: uppercase;
+  }
+  & td,
+  & td a {
+    font: var(--wysigyg__td-font);
+    letter-spacing: var(--wysigyg__td-letter-spacing);
+    color: var(--wysigyg__td-color);
+  }
+  & .table-responsive {
+    overflow: auto;
+    margin-top: var(--wysigyg--blocks-table-margin-top);
+  }
+  & td,
+  & th {
+    vertical-align: middle;
+  }
+
+  & ol {
+    list-style-type: decimal;
+    padding-left: var(--wysigyg--blocks-list-padding-left);
+  }
+
+  & ul {
+    list-style-type: disc;
+    padding-left: var(--wysigyg--blocks-list-padding-left);
+
+    & ul {
+      list-style-type: circle;
+      margin-top: var(--layout-xxs);
+    }
+  }
+
+  & li {
+    list-style: inherit;
+  }
+}

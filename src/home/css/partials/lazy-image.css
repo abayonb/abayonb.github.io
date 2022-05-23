@@ -1,0 +1,27 @@
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.image--transition {
+  transition: all 800ms;
+}
+
+.image--ease {
+  transform: translate3d(0, 90px, 0);
+}
+
+.image--lazy {
+  opacity: 0;
+}

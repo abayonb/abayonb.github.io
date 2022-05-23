@@ -1,0 +1,5 @@
+.aurora .faq-view {
+  & iframe {
+    width: 100%;
+  }
+}

@@ -1,0 +1,19 @@
+<div id="header-container" class="motion expand header layerM positionFixed wide">
+  <header
+      class="header app-header alignItemsCenter bgBase displayFlex flexDirectionRow layerS paddingRightM paddingLeftM positionRelative wide">
+    {{> header-logo}}
+    <div class="header__actions alignItemsCenter displayFlex flexDirectionRow">
+      <a class="text action level-3 link app-header__login colorContent marginRightLayoutS upperCase login-button"
+         href="/user/login">
+        {{translate "home.login"}}
+      </a>
+      <div class="positionRelative">
+        <div role="button" class="button" id="header-burger-menu">
+          <i class="icon auroraicons menu displayBlock" aria-hidden="true"></i>
+        </div>
+        <div class="motion timing-spring expand header__notification bgPrimary bcBase marginLeftM positionAbsolute"
+             style="transform: scale(0); transition-property: transform;"></div>
+      </div>
+    </div>
+  </header>
+</div>

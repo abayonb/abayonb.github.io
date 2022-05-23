@@ -1,0 +1,22 @@
+#discover-sticky-button-container button {
+  padding-right: var(--layout-l);
+  padding-left: var(--layout-l);
+}
+
+@media (min-width: 840px) {
+  #discover-sticky-button-container {
+    padding-top: var(--layout-xxs);
+    padding-bottom: var(--layout-xxs);
+  }
+
+  #discover-sticky-button-container button {
+    padding-right: var(--layout-m);
+    padding-left: var(--layout-m);
+    height: var(--input-size-small);
+    min-height: var(--input-size-small);
+  }
+  #discover-sticky-button-container .desktop-small {
+    height: var(--input-size-small);
+    min-height: var(--input-size-small);
+  }
+}

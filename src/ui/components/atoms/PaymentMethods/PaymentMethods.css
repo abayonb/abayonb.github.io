@@ -1,0 +1,4 @@
+.aurora .payment-methods__image {
+  display: flex;
+  justify-content: center;
+}

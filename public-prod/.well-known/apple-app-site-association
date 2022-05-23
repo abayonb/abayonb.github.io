@@ -1,0 +1,26 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TH7T3DPXMC.com.lookiero.user",
+        "paths": [
+          "NOT /web_redirect/*",
+          "/user/*"
+        ],
+        "appIDs": [
+          "TH7T3DPXMC.com.lookiero.user"
+        ],
+        "components": [
+          {
+            "/": "/web_redirect/*",
+            "exclude": true
+          },
+          {
+            "/": "/user/*"
+          }
+        ]
+      }
+    ]
+  }
+}

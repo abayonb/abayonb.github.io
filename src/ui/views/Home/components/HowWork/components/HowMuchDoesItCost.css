@@ -1,0 +1,12 @@
+.howMuchRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.howMuchIconContainer {
+  width: 48px;
+}
+
+.howMuchTextContainer {
+  flex: 1;
+}

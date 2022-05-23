@@ -1,0 +1,7 @@
+@media screen and (min-width: 840px) {
+  .aurora .home-quiz {
+    & button {
+      width: 298px;
+    }
+  }
+}

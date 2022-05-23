@@ -1,0 +1,36 @@
+<section class="layout influencers-layout full-width justifyContentCenter wide" align="center"
+         id="influencers">
+  <div class="wide influencers-layout__inner">
+    <div class="layout influencers-layout-content justifyContentCenter">
+      <div class="box influencers-title-container wide">
+        <h2 class="text heading level-2 textAlignCenter">
+          {{translate "home.influencers.title"}}
+        </h2>
+      </div>
+    </div>
+    <div class="layout influencers-subtitle-container justifyContentCenter marginBottomLayoutS">
+      <div class="box wide influencers-subtitle-box">
+        <p class="text body level-2 textAlignCenter">
+          {{translate "home.influencers.subtitle"}}
+        </p>
+      </div>
+    </div>
+    <div class="layout influencers-slider full-width justifyContentBetween wide">
+
+      <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-android">
+        <div class="slider displayFlex flexDirectionRow">
+          {{> influencer name="mademoisellemodeuse" id="01_mademoisellemodeuse" cardStyle="influencer-slider-first"}}
+          {{> influencer name="lglora" id="02_lglora"}}
+          {{> influencer name="manguepoudree" id="03_manguepoudree"}}
+          {{> influencer name="etdieucrea" id="04_etdieucrea"}}
+          {{> influencer name="poupeerousse" id="05_poupeerousse"}}
+          {{> influencer name="myblondestyle" id="06_myblondestyle"}}
+          {{> influencer name="fashionvitaminsantwerp" id="07_fashionvitaminsantwerp"}}
+          {{> influencer name="elenavidalrod" id="08_elenavidalrod"}}
+          {{> influencer name="laura.miola" id="09_laura"}}
+          {{> influencer name="mrsmlmode" id="10_mrsmlmode" cardStyle="influencer-slider-last"}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

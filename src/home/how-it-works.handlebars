@@ -1,0 +1,42 @@
+<section class="layout justifyContentCenter wide how-it-works" align="center" id="how">
+  <div class="box wide how-it-works-container">
+    {{> title text="home.how.title"}}
+    <div class="layout full-width justifyContentCenter marginBottomLayoutS wide">
+      <div class="box how-it-works-subtitle-container wide">
+        <p class="text body level-2 textAlignCenter">
+          {{{translate "home.how.subtitle"}}}
+        </p>
+      </div>
+    </div>
+    <div class="alignItemsLeft wide how-it-works-items-container">
+      <div class="box wide how-it-works-item how-it-works-item-first">
+        <div class="how-it-works-item-image-container">
+          {{> lazy-image id="how-it-works-1" height="360" width="288" classes="image displayBlock marginBottomLayoutXS" easeIn="image--ease"}}
+        </div>
+        
+        <h3 class="text body level-1 marginBottomLayoutXXS textAlignCenter">{{{translate "home.how.step1_title"}}}</h3>
+        {{#if (isInCountry 'be|es|fr|lu' ) }} 
+          {{setTranslationVar "link" "<span id=\"ps-link-1\" class=\"ps-link text body level-3 link link__underlined bcContent colorContent\">[{home.how.PSlink}]</span>"}}
+        {{/if}}
+        <p class="text body level-3 textAlignCenter">{{{translate "home.how.step1_paragraph"}}}</p>
+      </div>
+      <div class="box wide how-it-works-item">
+        <div class="how-it-works-item-image-container">
+          {{> lazy-image id="how-it-works-2" height="360" width="288" classes="image displayBlock marginBottomLayoutXS" easeIn="image--ease"}}
+        </div>
+          <h3 class="text body level-1 marginBottomLayoutXXS textAlignCenter">
+            {{{translate "home.how.step2_title"}}}
+          </h3>
+          {{setTranslationVar "link" "<span id=\"ps-link-2\" class=\"ps-link text body level-3 link link__underlined bcContent colorContent\">[{home.how.PSlink}]</span>"}}
+          <p class="text body level-3 textAlignCenter">{{{translate "home.how.step2_paragraph"}}}</p>
+      </div>
+      <div class="box wide how-it-works-item">
+        <div class="how-it-works-item-image-container">
+          {{> lazy-image id="how-it-works-3" height="360" width="288" classes="image displayBlock marginBottomLayoutXS" easeIn="image--ease"}}
+        </div>
+        <h3 class="text body level-1 marginBottomLayoutXXS textAlignCenter">{{{translate "home.how.step3_title"}}}</h3>
+        <p class="text body level-3 textAlignCenter">{{{translate "home.how.step3_paragraph"}}}</p>
+      </div>
+    </div>
+  </div>
+</section>

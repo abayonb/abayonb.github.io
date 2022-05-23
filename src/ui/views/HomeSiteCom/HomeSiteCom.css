@@ -1,0 +1,14 @@
+:root {
+}
+
+.aurora {
+  & .home-site-com {
+    height: 100vh;
+  }
+  & .S .home-site-com__content {
+    max-width: 310px;
+  }
+  & .home-site-com__content {
+    max-width: 390px;
+  }
+}

@@ -1,0 +1,40 @@
+.aurora div.influencers-slider {
+  & .swiper-container {
+    width: 100%;
+  }
+  & .swiper-slide {
+    width: calc(100% - 112px);
+  }
+  & .influencers-slider__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space-s);
+    & .avatar-wrapper {
+      min-width: var(--space-xl);
+      height: var(--space-xl);
+      margin-right: var(--space-s);
+      border-radius: 50%;
+      overflow: hidden;
+      -webkit-backface-visibility: hidden;
+      -webkit-transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+@media (min-width: 840px) {
+  .aurora {
+    & .influencers-layout {
+      overflow-x: hidden;
+    }
+    & div.influencers-slider {
+      max-width: calc(100vw - var(--layout-xxl));
+      overflow: visible;
+      & .swiper-container {
+        overflow: visible;
+      }
+      & div.swiper-slide {
+        width: calc((66.66667vw / 3) - 32px);
+      }
+    }
+  }
+}

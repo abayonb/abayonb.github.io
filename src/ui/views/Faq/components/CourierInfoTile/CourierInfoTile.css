@@ -1,0 +1,9 @@
+:root {
+  --courier-content-margin-top: var(--space-m, 16px);
+}
+
+.courier_content {
+  & p {
+    margin-top: var(--courier-content-margin-top);
+  }
+}

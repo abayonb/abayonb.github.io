@@ -1,0 +1,8 @@
+.hidden-component {
+  display: none;
+  visibility: hidden;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}

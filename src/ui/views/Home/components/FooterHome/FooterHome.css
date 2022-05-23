@@ -1,0 +1,10 @@
+.aurora .footer-home {
+  padding-bottom: calc(var(--layout-xl) + var(--input-size));
+  background-color: var(--color-content);
+}
+
+@media screen and (min-width: 840px) {
+  .aurora .footer-home {
+    padding-bottom: var(--layout-xxl);
+  }
+}

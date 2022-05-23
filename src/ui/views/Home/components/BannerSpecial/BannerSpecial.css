@@ -1,0 +1,32 @@
+.aurora .banner-special {
+  position: relative;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-accent);
+  padding: var(--layout-xs);
+
+  &.banner-special__bf {
+    background-color: var(--color-content);
+  }
+
+  & .banner-special__text {
+    padding: var(--font-body-1-padding);
+    letter-spacing: var(--font-body-1-letter-spacing);
+    font: var(--font-body-1);
+
+    &.banner-special__bf {
+      color: var(--color-base);
+    }
+  }
+}
+
+@media (min-width: 840px) {
+  .aurora .banner-special {
+    justify-content: flex-start;
+    & .banner-special__text {
+      text-align: left;
+    }
+  }
+}

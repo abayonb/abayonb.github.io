@@ -1,0 +1,15 @@
+.aurora .fixed-cta {
+  height: 56px;
+  & button {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .aurora .fixed-cta {
+    height: 72px;
+    & button {
+      width: auto;
+    }
+  }
+}

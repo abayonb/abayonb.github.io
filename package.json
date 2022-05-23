@@ -1,0 +1,149 @@
+{
+  "name": "user-site-front",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@lookiero/aurora": "2.0.205",
+    "@lookiero/aurora-iconfont": "2.0.25",
+    "@lookiero/mendel-web-client": "0.0.7",
+    "@lookiero/user-errorhandler-front": "0.0.48",
+    "@lookiero/user-tracking-front": "0.0.36",
+    "@sentry/browser": "6.0.2",
+    "@typeform/embed-react": "^1.1.1",
+    "body-scroll-lock": "3.1.5",
+    "classnames": "^2.3.1",
+    "html-react-parser": "1.2.3",
+    "js-cookie": "2.2.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-helmet": "6.1.0",
+    "react-router-dom": "5.2.0",
+    "react-router-named-routes": "0.0.23",
+    "react-scripts": "4.0.1",
+    "swiper": "6.4.9",
+    "tiny-emitter": "2.1.0"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.8.2",
+    "babel-jest": "26.6.3",
+    "compression": "^1.7.4",
+    "cross-fetch": "3.0.6",
+    "customize-cra": "1.0.0",
+    "cypress": "6.3.0",
+    "env-cmd": "10.1.0",
+    "esbuild": "^0.14.3",
+    "eslint-config-prettier": "7.2.0",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-prettier": "3.3.1",
+    "eslint-plugin-react": "7.22.0",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.6.3",
+    "fs-extra": "^10.0.0",
+    "glob": "^7.2.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "handlebars": "^4.7.7",
+    "husky": "4.3.8",
+    "lint-staged": "10.5.3",
+    "local-web-server": "^4.2.1",
+    "postcss-preset-env": "6.7.0",
+    "prettier": "2.2.1",
+    "puppeteer": "^5.5.0",
+    "react-app-rewired": "2.1.8",
+    "react-snap": "1.23.0",
+    "stylelint": "13.9.0",
+    "stylelint-config-concentric-order": "4.0.1",
+    "stylelint-config-prettier": "8.0.2",
+    "stylelint-order": "4.1.0",
+    "stylelint-prettier": "1.1.2",
+    "stylelint-selector-bem-pattern": "2.1.0",
+    "stylelint-webpack-plugin": "2.1.1",
+    "xml-js": "1.6.11",
+    "xmlbuilder2": "2.4.0"
+  },
+  "scripts": {
+    "preinstall": "yarn i18n:download:default",
+    "install:dev": "node --experimental-modules ./scripts/install.js",
+    "start": "react-app-rewired start",
+    "start:proxy": "node scripts/dev-server.js",
+    "build:dev": "env-cmd -f .env react-app-rewired build",
+    "build:prod": "env-cmd -f .env.production react-app-rewired build",
+    "build:multisite": "node --experimental-modules ./scripts/buildStatics.js",
+    "build:sitemap": "node --experimental-modules ./scripts/sitemap.js",
+    "test": "react-app-rewired test",
+    "e2e": "yarn cypress",
+    "cypress": "cypress run",
+    "cypress:open": "cypress open",
+    "fixer": "yarn fixer:js && yarn fixer:css",
+    "fixer:js": "yarn prettier:js && yarn linter:js",
+    "fixer:css": "yarn prettier:css && yarn linter:css",
+    "prettier:js": "prettier --config ./.prettierrc 'src/**/*.{js,jsx,ts,tsx}' --write",
+    "prettier:css": "prettier ./.prettierrc 'src/**/*.css' --write",
+    "linter:js": "eslint -c ./.eslintrc.cjs 'src/**/*.{js,jsx,ts,tsx}' --fix",
+    "linter:css": "stylelint --config ./.stylelintrc 'src/**/*.css' --fix",
+    "lint": "yarn linter:js && yarn linter:css",
+    "browsers:support": "browserslist",
+    "i18n:download": "node --experimental-modules ./scripts/downloadLocales.js",
+    "i18n:download:default": "npm run --site=uk i18n:download",
+    "ws": "ws",
+    "lighthouse": "lhci autorun"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "prepare-commit-msg": ".hooks/prepare-commit-msg.sh $HUSKY_GIT_PARAMS",
+      "pre-push": ".hooks/pre-push.sh"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "yarn fixer:js",
+      "git add"
+    ],
+    "*.{css}": [
+      "yarn fixer:css",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@i18n(.*)$": "<rootDir>/src/ui/i18n$1",
+      "^@aurora(.*)$": "<rootDir>node_modules/@lookiero/aurora/web$1",
+      "^@app(.*)$": "<rootDir>/src/ui/app$1",
+      "^@components(.*)$": "<rootDir>/src/ui/components$1",
+      "^@views(.*)$": "<rootDir>/src/ui/views$1",
+      "^@assets(.*)$": "<rootDir>/src/ui/assets$1"
+    },
+    "setupFiles": [
+      "<rootDir>/config/jest/setupTests.js"
+    ]
+  },
+  "config-overrides-path": "./config-overrides.cjs",
+  "reactSnap": {
+    "skipThirdPartyRequests": true,
+    "asyncScriptTags": true,
+    "include": [
+      "/",
+      "/help-and-contact",
+      "/terms-and-conds",
+      "/index.com"
+    ],
+    "crawl": false,
+    "puppeteerArgs": [
+      "--disable-setuid-sandbox",
+      "--no-sandbox"
+    ],
+    "concurrency": 1,
+    "inlineCss": false,
+    "puppeteerExecutablePath": "/usr/bin/chromium-browser"
+  }
+}

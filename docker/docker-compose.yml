@@ -1,0 +1,14 @@
+version: "3.1"
+services:
+  stubs:
+    image: springcloud/spring-cloud-contract-stub-runner:2.1.2.RELEASE
+    environment:
+      - STUBRUNNER_IDS=com.lookiero:backend-for-user.infrastructure-springboot-web:+:stubs:9876
+      - STUBRUNNER_REPOSITORY_ROOT=https://mvn.lookiero.tech/repository/snapshots
+      - STUBRUNNER_USERNAME=user
+      - STUBRUNNER_PASSWORD=Lookiero2019
+      - STUBRUNNER_STUBS_MODE=REMOTE
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8081:8083"
+      - "127.0.0.1:9876:9876"

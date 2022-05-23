@@ -1,0 +1,40 @@
+.slider {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: both mandatory;
+  width: 100%;
+  scroll-padding: 1rem;
+}
+
+.active {
+  scroll-snap-type: unset;
+}
+
+.slider-group {
+  flex: 1;
+}
+
+.slider .slider-item {
+  scroll-snap-align: center;
+  position: relative;
+  height: calc((5 / 4) * 83vw);
+  min-width: 83%;
+  width: 83%;
+}
+
+.slider::-webkit-scrollbar {
+  height: 0;
+  background: transparent; /* make scrollbar transparent */
+}
+
+@media (min-width: 840px) {
+  .slider .slider-item {
+    width: 33%;
+    max-width: 33%;
+    min-width: 33%;
+    height: auto;
+  }
+  .slider-item img {
+    width: 100%;
+  }
+}

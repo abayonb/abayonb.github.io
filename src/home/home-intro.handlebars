@@ -1,0 +1,67 @@
+<section class="home-intro positionRelative">
+  <section class="home-intro__content" align="center">
+    {{#if (isInCountry 'be|es|fr|it' ) }}
+     <div class="banner-promo">
+      <span class="banner-promo__text ">
+        {{translate "banner.campaignWelcome.message"}}
+      </span>
+    </div>
+   {{/if}}
+
+    <div class="home-intro__content-top layout">
+      <h1 class="home-intro__content-top__title text heading level-1 colorContent marginBottomLayoutS">
+        {{{translate "home.main.title"}}}
+      </h1>
+      <div class="home-intro__content-top__bullets">
+        <p class="bullets text body level-2 colorContent">
+          <i class="icon auroraicons rounded-tick displayBlock" aria-hidden="true"></i>
+        {{{translate "home.main.bullet1"}}}
+        </i>
+        </p>
+        <p class="bullets text body level-2 colorContent">
+          <i class="icon auroraicons rounded-tick displayBlock" aria-hidden="true"></i>
+        {{{translate "home.main.bullet2"}}}
+        </p>
+        <p class="bullets text body level-2 colorContent">
+          <i class="icon auroraicons rounded-tick displayBlock" aria-hidden="true"></i>
+        {{{translate "home.main.bullet3"}}}
+        </p>
+      </div>
+      <button class="button button--atom home-intro__cta bgPrimary paddingRightL paddingLeftL positionRelative wide"
+              id="home-intro__cta" type="button">
+        <div class="touchable touchable layerS positionAbsolute">
+          <div class="motion expand ripple bgTouchable pointerNone" style="opacity: 0; transition-property: opacity;"></div>
+        </div>
+        <div class="alignItemsCenter displayFlex flexXS flexDirectionRow justifyContentCenter layerS pointerNone positionRelative">
+          <span class="text action level-3 colorContent pointerNone upperCase">
+            {{translate "navigation.start.cta"}}
+          </span>
+        </div>
+        <div class="motion busy bgBase pointerNone positionAbsolute" style="width: 0%; transition-property: width;"></div>
+      </button>
+      {{#if (getCountryConfig "showTrustPilot")}}
+        <div class="home-intro__trustpilot-wrapper displayFlex paddingTopLayoutS paddingBottomLayoutS textAlignLeft">
+          <p class="text body level-3 home-intro__trustpilot-text colorGrayscaleXL marginTopS marginRightM marginBottomXXS">
+            {{{translate "home.main.trustpilot"}}}
+          </p>
+          <div class="home-intro__trustpilot-image alignItemsCenter displayFlex flexDirectionColumn justifyContentBetween">
+            <img id="trustpilot-logo-image" src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png" alt="Trustpilot Logo" class="image">
+            <img id="trustpilot-stars-image" src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png" alt="Trustpilot Four Stars" class="image">
+          </div>
+        </div>
+      {{/if}}
+    </div>
+    <div class="home-intro-navigate-container">
+      <div class="layout L justifyContentCenter wide">
+        <div class="box displayFlex justifyContentCenter marginBottomLayoutS textAlignCenter wide">
+          <button id="home-intro-to-next-section" class="button" type="button">
+            <i class="icon auroraicons arrow-down colorContent displayBlock" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <aside class="home-intro__media wide">
+    <img id="home-intro-main-image" height="900" width="720" class="image" alt="Woman" src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png" />
+  </aside>
+</section>

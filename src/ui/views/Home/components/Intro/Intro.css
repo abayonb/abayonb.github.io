@@ -1,0 +1,128 @@
+.aurora .home-intro {
+  --trustpilot-font-size: 14px;
+  --trustpilot-font-weight: 500;
+  --trustpilot-line-height: 20px;
+  --trustpilot-image-height: 50px;
+  --trustpilot-image-width: 98px;
+  --trustpilot-wrapper-width: 250px;
+
+  flex-wrap: wrap;
+  margin-bottom: var(--layout-m);
+
+  & .home-intro__media {
+    width: 100%;
+  }
+
+  & .home-intro__content {
+    & > .home-intro__content-top {
+      justify-content: center;
+
+      & .home-intro__content-top__bullets {
+        margin: 0 auto var(--layout-s);
+
+        & .bullets {
+          font: var(--font-body-2);
+          line-height: var(--space-l);
+          display: -webkit-flex;
+          display: flex;
+          text-align: left;
+          -webkit-align-items: center;
+          align-items: center;
+
+          & .icon {
+            display: block;
+            margin-right: var(--space-m);
+            -webkit-flex-shrink: 0;
+            flex-shrink: 0;
+          }
+        }
+        & .bullets:not(:last-child) {
+          margin-bottom: var(--space-m);
+        }
+      }
+    }
+
+    & .home-intro__trustpilot-wrapper {
+      width: var(--trustpilot-wrapper-width);
+
+      & .home-intro__trustpilot-text {
+        font: var(--font-detail-1);
+        font-size: var(--trustpilot-font-size);
+        font-weight: var(--trustpilot-font-weight);
+        line-height: var(--trustpilot-line-height);
+      }
+      & .home-intro__trustpilot-image {
+        height: var(--trustpilot-image-height);
+        min-width: var(--trustpilot-image-width);
+        width: var(--trustpilot-image-width);
+      }
+    }
+  }
+}
+
+@media (max-width: 499px) {
+  .aurora .home-intro .home-intro__content > .home-intro__content-top > .home-intro__content-top__bullets {
+    & .bullets {
+      font: var(--font-body-3);
+      line-height: 20px;
+    }
+  }
+}
+
+@media (min-width: 840px) {
+  .aurora .home-intro {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 0;
+    margin-bottom: 0;
+
+    & .home-intro__content {
+      position: relative;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: var(--layout-m) 0;
+
+      & .banner-promo {
+        position: relative;
+        top: 0;
+      }
+      & .banner-special {
+        position: relative;
+        top: 0;
+      }
+      & .banner-info {
+        position: relative;
+        bottom: 0;
+      }
+
+      & > .home-intro__content-top {
+        flex: 1;
+        max-width: 472px;
+
+        & .home-intro__content-top__bullets {
+          max-width: 360px;
+
+          & .bullets:not(:last-child) {
+            margin-bottom: var(--space-l);
+          }
+        }
+      }
+
+      & .home-intro__cta {
+        width: 298px;
+        margin: 0 auto;
+      }
+    }
+    & .home-intro__media {
+      position: relative;
+      max-width: 50%;
+      overflow: hidden;
+
+      & > .image-container {
+        padding-top: calc(100vh - var(--layout-m)) !important;
+      }
+    }
+  }
+}

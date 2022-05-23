@@ -1,0 +1,9 @@
+.aurora .header {
+  bottom: auto;
+  & .app-header {
+    & .app-header__login.link {
+      position: relative;
+      top: -2px;
+    }
+  }
+}

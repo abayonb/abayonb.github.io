@@ -1,0 +1,44 @@
+<div class="home-quiz bgOverlay" id="quiz">
+  <div class="home-quiz-content layout column justifyContentBetween full-width paddingBottomLayoutM wide">
+    <div class="home-quiz-title-container box alignItemsCenter displayFlex flexDirectionColumn wide">
+      <span class="text detail level-3 marginBottomLayoutXS upperCase textAlignCenter">
+        {{translate "home.quiz.catchphrase"}}
+      </span>
+      <p class="home-quiz-title-question text heading textAlignCenter">       
+        {{translate "style.leisure.title"}}
+      </p>
+    </div>
+    <div class="home-quiz-question-container alignItemsCenter displayFlex flexDirectionColumn paddingTopLayoutM wide">
+      <div id="home-quiz-question-container__inner"
+           class="home-quiz-question-container__inner box alignItemsStart displayFlex flexDirectionRow flexWrapWrap justifyContentBetween wide">
+        {{> thumbnail id="1" question="style.leisure.A" value="1" containerStyle="margin-bottom: 3px" }}
+        {{> thumbnail id="2" question="style.leisure.B" value="2" containerStyle="margin-bottom: 3px" }}
+        {{> thumbnail id="3" question="style.leisure.C" value="3"}}
+        {{> thumbnail id="4" question="style.leisure.D" value="4"}}
+      </div>
+      <div id="home-quiz-error" class="home-quiz-error box marginBottomLayoutXS wide displayNone">
+        <p class="text detail level-1 colorPrimary textAlignCenter">
+          {{translate "style.leisure.mandatoryError"}}
+        </p>
+      </div>
+      <div class="home-quiz-button-container box displayFlex justifyContentCenter wide">
+        <button id="submit-quiz" class="button button--atom bgPrimary paddingRightL paddingLeftL positionRelative wide"
+                type="button">
+          <div class="touchable touchable layerS positionAbsolute">
+            <div class="motion expand ripple bgTouchable pointerNone"
+                 style="opacity: 0; transition-property: opacity;"></div>
+          </div>
+          <div
+              class="alignItemsCenter displayFlex flexXS flexDirectionRow justifyContentCenter layerS pointerNone positionRelative">
+            <span class="text action level-3 colorContent pointerNone upperCase">
+              {{translate "home.quiz.cta"}}
+            </span>
+          </div>
+          <div class="motion busy bgBase pointerNone positionAbsolute"
+               style="width: 0%; transition-property: width;"></div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

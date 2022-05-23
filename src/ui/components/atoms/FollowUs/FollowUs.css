@@ -1,0 +1,28 @@
+.aurora .follow-us__links {
+  display: flex;
+  justify-content: center;
+
+  & a {
+    width: 24px;
+    text-decoration: none;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.aurora .follow-us__link {
+  margin-left: 50px;
+}
+
+@media (min-width: 840px) {
+  .aurora .follow-us__links {
+    & a {
+      width: 24px;
+    }
+  }
+}

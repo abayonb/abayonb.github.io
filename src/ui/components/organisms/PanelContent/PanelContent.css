@@ -1,0 +1,5 @@
+.aurora .panel-content {
+  & .menu {
+    flex: 1;
+  }
+}

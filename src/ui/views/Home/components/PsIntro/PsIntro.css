@@ -1,0 +1,99 @@
+.aurora {
+  & .personal-shopper-slide__info__text {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  & .personal-shopper-slide__cite > div {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-accent);
+  }
+
+  & .home-ps-intro__personal-shopper-slides {
+    overflow-x: hidden;
+    & .swiper-wrapper .swiper-slide {
+      width: 83%;
+      min-width: 83%;
+      display: flex;
+      height: calc((5 / 4) * 83vw);
+      align-items: stretch;
+    }
+    & .swiper-slide > div {
+      width: 33%;
+      flex-grow: 1;
+    }
+
+    & .swiper-container {
+      padding-bottom: calc(var(--space-xxxl, 48px) + var(--space-s, 8px));
+      & .swiper-pagination {
+        bottom: var(--space-m, 16px);
+      }
+      & .swiper-pagination-bullet {
+        height: var(--space-s, 8px);
+        width: var(--space-s, 8px);
+        background-color: var(--color-gray-m, #cfcfcf);
+        opacity: 1;
+        margin: 0 var(--space-s, 8px);
+      }
+      & .swiper-pagination-bullet-active,
+      & .swiper-pagination-bullet-active-index {
+        background-color: var(--color-content, #000);
+      }
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  .aurora {
+    & .personal-shopper-slide__cite {
+      margin-right: var(--space-l);
+    }
+    & .home-ps-intro__personal-shopper-slides {
+      & .swiper-slide:last-child .personal-shopper-slide__cite {
+        margin-right: 0;
+      }
+      & .swiper-container {
+        left: -9%;
+        overflow: visible;
+      }
+      & .personal-shopper-slide__cite {
+        background: none;
+        padding: 0;
+      }
+
+      & .swiper-pagination-bullets {
+        left: 9%;
+      }
+
+      & .swiper-pagination-bullet {
+        display: none;
+      }
+      & .swiper-pagination-bullet:nth-child(3n + 1) {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@media (min-width: 840px) {
+  .aurora {
+    & .layout.home-ps-intro__title {
+      max-width: 576px;
+    }
+    & .home-ps-intro__personal-shopper-slides {
+      & .swiper-wrapper .swiper-slide {
+        height: initial;
+        width: calc(100% / 3);
+        min-width: calc(100% / 3);
+      }
+    }
+  }
+}

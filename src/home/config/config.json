@@ -1,0 +1,40 @@
+{
+  "default": {
+    "homeIntroImage": "01",
+    "showTrustPilot": false,
+    "giftcardAvailable": false,
+    "enableOneTrust": false
+  },
+  "countrySpecific": {
+    "at": {},
+    "be": {
+      "homeIntroImage": "02",
+      "enableOneTrust": true,
+      "oneTrustKey": "4e5a0a73-8d6b-4c3f-b617-bd32dcfab349"
+    },
+    "de": {
+      "oneTrustKey": "3b30fcde-0abe-4bc2-a079-99f07d013fa5"
+    },
+    "es": {
+      "giftcardAvailable": true,
+      "oneTrustKey": "43592f0c-06d4-4107-86d6-d60b635e5e30"
+    },
+    "fr": {
+      "homeIntroImage": "02",
+      "giftcardAvailable": true,
+      "oneTrustKey": "b5e9a1c2-da58-4537-88ba-206b96587c54"
+    },
+    "it": {
+      "oneTrustKey": "4bede5ff-0dc3-4e9e-9a7b-565413b1a74d"
+    },
+    "pt": {
+      "enableOneTrust": true,
+      "oneTrustKey": "78d0cdea-edec-42a3-b074-6443c3e8f8e1"
+    },
+    "uk": {
+      "showTrustPilot": true,
+      "giftcardAvailable": true,
+      "oneTrustKey": "56967ef7-6f34-4367-94e9-5ff4bfdb9102"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.title-container {
+  margin-bottom: var(--layout-xs);
+  max-width: calc(2 / 3 * 100%);
+}
+
+@media (max-width: 840px) {
+  .title-container {
+    margin-bottom: var(--layout-xxs);
+    margin-right: var(--layout-s);
+    margin-left: var(--layout-s);
+    max-width: 100%;
+  }
+}

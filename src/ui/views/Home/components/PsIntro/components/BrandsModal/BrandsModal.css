@@ -1,0 +1,20 @@
+.brands-modal {
+  & header span {
+    display: block;
+    width: 310px;
+  }
+  & .brands-modal-list {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    column-gap: var(--space-s, 8px);
+    row-gap: var(--space-s, 8px);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  & img {
+    width: 98px;
+    height: 66px;
+    margin: 0 auto;
+  }
+}

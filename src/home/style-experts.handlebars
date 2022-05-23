@@ -1,0 +1,146 @@
+<section class="layout home-ps-intro full-width paddingTopLayoutL wide" align="center" id="ps">
+  <div class="box wide home-ps-intro__container">
+    {{> title text="home.psintro.title"}}
+    <section class="home-ps-intro__personal-shopper-slides paddingTopLayoutXS">
+      <div class="slider displayFlex flexDirectionRow">
+        <div class="slider-item">
+          {{> lazy-image id="psintro-ps1" height="400" width="320"}}
+          <p class="text body level-3 personal-shopper-slide__info__text positionAbsolute textAlignCenter">
+            <strong class="text brand level-1 colorBase displayBlock">{{translate "home.psintro.name1"}}</strong>
+            <em class="text action level-3 colorBase displayBlock marginBottomLayoutS upperCase">
+              {{translate "home.psintro.rol"}}
+            </em>
+          </p>
+        </div>
+        <div class="slider-item">
+          {{> lazy-image id="psintro-ps1-look" height="400" width="320"}}
+        </div>
+        <div class="slider-item bgAccent marginRightLayoutS">
+          <div class="paddingRightLayoutM paddingLeftLayoutM displayFlex flexDirectionColumn justifyContentCenter
+          ps-intro-cite">
+            <cite class="text body level-1 textAlignCenter">
+              {{translate "home.psintro.quote1"}}
+            </cite>
+          </div>
+        </div>
+        <div class="slider-item">
+          {{> lazy-image id="psintro-ps2" height="400" width="320"}}
+          <p class="text body level-3 personal-shopper-slide__info__text positionAbsolute textAlignCenter">
+            <strong class="text brand level-1 colorBase displayBlock">{{translate "home.psintro.name2"}}</strong>
+            <em class="text action level-3 colorBase displayBlock marginBottomLayoutS upperCase">
+              {{translate "home.psintro.rol"}}
+            </em>
+          </p>
+        </div>
+        <div class="slider-item">
+          {{> lazy-image id="psintro-ps2-look" height="400" width="320"}}
+        </div>
+        <div class="slider-item bgAccent marginRightLayoutS">
+          <div class="paddingRightLayoutM paddingLeftLayoutM displayFlex flexDirectionColumn justifyContentCenter
+          ps-intro-cite">
+            <cite class="text body level-1 textAlignCenter">
+              {{translate "home.psintro.quote2"}}
+            </cite>
+          </div>
+        </div>
+
+        <div class="slider-item">
+          {{> lazy-image id="psintro-ps3" height="400" width="320"}}
+          <p class="text body level-3 personal-shopper-slide__info__text positionAbsolute textAlignCenter">
+            <strong class="text brand level-1 colorBase displayBlock">{{translate "home.psintro.name3"}}</strong>
+            <em class="text action level-3 colorBase displayBlock marginBottomLayoutS upperCase">
+              {{translate "home.psintro.rol"}}
+            </em>
+          </p>
+        </div>
+        <div class="slider-item">
+          {{> lazy-image id="psintro-ps3-look" height="400" width="320"}}
+        </div>
+        <div class="slider-item bgAccent">
+          <div class="paddingRightLayoutM paddingLeftLayoutM displayFlex flexDirectionColumn justifyContentCenter
+          ps-intro-cite">
+            <cite class="text body level-1 textAlignCenter">
+              {{translate "home.psintro.quote3"}}
+            </cite>
+          </div>
+        </div>
+      </div>
+      <div class="slider-pagination displayFlex justifyContentCenter paddingTopLayoutS paddingBottomL">
+        <div class="slider-pagination-container displayFlex flexDirectionRow justifyContentBetween">
+          <div class="slider-pagination-bullet active" id="slider-pagination-1"></div>
+          <div class="slider-pagination-bullet" id="slider-pagination-2"></div>
+          <div class="slider-pagination-bullet" id="slider-pagination-3"></div>
+        </div>
+      </div>
+    </section>
+    <section class="layout home-ps-intro__description full-width justifyContentCenter wide">
+      <div class="box wide">
+        <p class="text body level-2 textAlignCenter">
+          {{setTranslationVar "link" "<a id=\"brands-modal-link\" class=\"text body level-2 link link__underlined
+          bcContent colorContent\">[{home.psintro.brandslink}]</a>"}}
+          {{{translate "home.psintro.subtitle"}}}
+        </p>
+      </div>
+    </section>
+  </div>
+  <aside id="brands-modal"
+   class="pointerNone modal brands-modal flexDirectionRow layerL positionFixed wide displayFlex"
+         aria-modal="true" aria-labelledby="modal_label_1" aria-describedby="modal_description_1" role="dialog"
+  >
+    <div
+        class="motion collapse overlay overlay--clickable alignItemsCenter bgOverlay displayFlex flexDirectionColumn justifyContentCenter layerM positionAbsolute"
+        role="button" tabindex="0" aria-label="overlay" style="opacity: 0; transition-property: opacity;" id="brands-modal-overlay"></div>
+    <div class="brands-modal-view layout justifyContentBetween layerXL wide">
+      <section class="motion collapse positionRelative wide"
+               style="opacity: 0; transition-property: opacity, top, transform;" id="brands-modal-section">
+        <div class="brands-modal-container box modal__box bgInfo paddingRightXL paddingLeftXL paddingTopM
+        paddingBottomXL wide">
+          <div class="closable displayFlex flexDirectionRow justifyContentEnd">
+            <div role="button" class="button bgInfo layerS" aria-label="close" id="brands-modal-close">
+              <i class="icon auroraicons close displayBlock" aria-hidden="true"></i>
+            </div>
+          </div>
+          <header class="alignItemsCenter displayFlex flexDirectionColumn marginTopXL marginBottomL">
+            <h2
+                class="text body level-1 textAlignCenter" id="modal_label_1">{{translate "home.brands.title"}}</h2>
+            <span class="text body level-2 marginTopM textAlignCenter" id="modal_description_1">
+              {{translate "home.brands.subtitle"}}
+            </span>
+          </header>
+          <div class="scrollview brands-modal-list">
+            <img class="image" alt="Vila" id="vila" loading="lazy"
+                 src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png"/>
+            <img class="image" alt="Only" id="only" loading="lazy"
+                 src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png"/>
+            <img class="image" loading="lazy" alt="Ichi" id="ichi"
+                 src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png"/>
+            <img class="image" loading="lazy" alt="Vero moda" id="vero-moda"
+                 src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png"/>
+            <img class="image" loading="lazy" alt="NAFNAF" id="nafnaf"
+                 src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png"/>
+            <img class="image" loading="lazy" alt="SCOTCH&amp;SODA" id="scotch-soda"
+                 src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png"/>
+            <img class="image" loading="lazy" alt="Carmakoma" id="carmakoma"
+                 src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png"/>
+            <img class="image" loading="lazy" alt="Tiffosi" id="tiffossi"
+                 src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png"/>
+            <img class="image" loading="lazy" alt="Lee" id="lee"
+                 src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png"/>
+            <img class="image" loading="lazy" alt="Street one" id="street-one"
+                 src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png"/>
+            <img class="image" loading="lazy" alt="Pieces" id="pieces"
+                 src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png"/>
+            <img class="image" loading="lazy" alt="Grace&amp;Mila" id="grace-mila"
+                 src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png"/>
+            <img class="image" loading="lazy" alt="Soft Rebels" id="soft-rebels"
+                 src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png"/>
+            <img class="image" loading="lazy" alt="Garcia jeans" id="garcia-jeans"
+                 src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png"/>
+            <img class="image" loading="lazy" alt="Esprit" id="espirit"
+                 src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png"/>
+          </div>
+        </div>
+      </section>
+    </div>
+  </aside>
+</section>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="pr" data-react-helmet="lang" lang="{{translate "home.main.lang"}}">
+<head>
+  <script>
+    (function(){var c = document.cookie.split(';'); for(var i=0,l=c.length;i<l;i++)if(c[i].trim().indexOf('access_token')!==-1)document.location.href= '/user'})();
+  </script>
+  <meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control">
+  <meta content="no-cache" http-equiv="Pragma">
+  <meta content="0" http-equiv="Expires">
+  <script type="text/javascript">function OptanonWrapper() {
+  }</script>
+  {{#if (getCountryConfig "enableOneTrust")}}
+    <script src="https://cdn-ukwest.onetrust.com/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8"
+            data-domain-script="{{getCountryConfig "oneTrustKey"}}"></script>
+  <style>
+    .ot-pc-footer-logo {
+      display: none
+    }
+    #onetrust-consent-sdk {
+      font-family: 'Founders Grotesk'
+    }
+  </style>
+  {{/if}}
+  <link href="{{REACT_APP_CDN_PATH}}/commons/fonts/fonts.css" rel="preconnect" crossorigin="">
+  <link href="{{REACT_APP_CDN_PATH}}/commons/fonts/fonts.css" rel="preload" as="style">
+  <link href="{{REACT_APP_CDN_PATH}}/commons/fonts/fonts.css" rel="stylesheet" media="print"
+        onload='this.onload=null, this.removeAttribute("media")'>
+  <noscript>
+    <link href="{{REACT_APP_CDN_PATH}}/commons/fonts/fonts.css" rel="stylesheet">
+  </noscript>
+  <script type="text/javascript">
+    window.kameleoonQueue = window.kameleoonQueue || [];
+  </script>
+  <link href="//{{REACT_APP_KAMALEOON}}.kameleoon.eu/kameleoon.js" rel="preload" as="script">
+  <script
+      type="text/javascript"
+      src="//{{REACT_APP_KAMALEOON}}.kameleoon.eu/kameleoon.js"
+      async="true"
+  ></script>
+  <link href="https://www.google-analytics.com" rel="dns-prefetch">
+  <link href="https://www.googletagmanager.com" rel="dns-prefetch">
+  <script type="text/javascript">
+    (function (e, t, a, n) {
+    e[n] = e[n] || [], e[n].push({"gtm.start": (new Date).getTime(), event: "gtm.js"});
+    var r = t.getElementsByTagName(a)[0], s = t.createElement(a);
+    s.async = !0, s.src = "https://www.googletagmanager.com/gtm.js?id={{REACT_APP_GTM_CONTAINER_ID}}", r.parentNode.insertBefore(s, r)
+  })(window, document, "script", "dataLayer");
+  </script>
+  <link href="{{REACT_APP_CDN_PATH}}/commons/favicon/favicon.ico" rel="icon">
+  <meta content="initial-scale=1" name="viewport">
+  <meta content="#000000" name="theme-color">
+  <link href="/manifest.json" rel="manifest">
+  <link href="static/css/styles.{{buildVersionHash}}.css" rel="stylesheet">
+
+  {{setTranslationVar "lkTitle" (concat (translate "head.organization") " | " (translate "head.title.home"))}}
+  <title>{{translate "lkTitle"}}</title>
+  <link href="{{translate "head.og.url"}}" rel="canonical" data-react-helmet="true">
+  <link href="https://lookiero.be/" rel="alternate" data-react-helmet="true" hreflang="fr-BE">
+  <link href="https://lookiero.de/" rel="alternate" data-react-helmet="true" hreflang="de-DE">
+  <link href="https://lookiero.es/" rel="alternate" data-react-helmet="true" hreflang="es-ES">
+  <link href="https://lookiero.fr/" rel="alternate" data-react-helmet="true" hreflang="fr-FR">
+  <link href="https://lookiero.it/" rel="alternate" data-react-helmet="true" hreflang="it-IT">
+  <link href="https://lookiero.pt/" rel="alternate" data-react-helmet="true" hreflang="pt-PT">
+  <link href="https://lookiero.co.uk/" rel="alternate" data-react-helmet="true" hreflang="en-GB">
+  <link href="https://lookiero.at" rel="alternate" data-react-helmet="true" hreflang="de-AT">
+  <link href="{{REACT_APP_CDN_PATH}}/commons/favicon/xxxhdpi_192×192.png" rel="apple-touch-icon"
+        data-react-helmet="true" sizes="192x192">
+  <link href="{{REACT_APP_CDN_PATH}}/commons/favicon/mdpi_48×48.png" rel="icon" data-react-helmet="true"
+        sizes="48x48" type="image/png">
+  <link href="{{REACT_APP_CDN_PATH}}/commons/favicon/hdpi_72×72.png" rel="icon" data-react-helmet="true"
+        sizes="72x72" type="image/png">
+  <link href="{{REACT_APP_CDN_PATH}}/commons/favicon/xxxhdpi_192×192.png" rel="mask-icon"
+        data-react-helmet="true" color="#5BBAD5">
+  <link href="{{REACT_APP_CDN_PATH}}/commons/favicon/favicon.ico" rel="shortcut icon"
+        data-react-helmet="true">
+  <meta data-react-helmet="true" charset="utf-8">
+  <meta content="{{translate "head.description.home"}}" data-react-helmet="true" name="description">
+  <meta content="{{translate "head.organization"}}" data-react-helmet="true" name="organization">
+  <meta content="{{translate "lkTitle"}}" data-react-helmet="true" property="og:title">
+  <meta content="{{translate "head.og.description"}}" data-react-helmet="true" property="og:description">
+  <meta content="{{REACT_APP_CDN_PATH}}/usf/images/share/lookiero.jpg" data-react-helmet="true"
+        property="og:image">
+  <meta content="{{REACT_APP_CDN_PATH}}/usf/images/share/lookiero.jpg" data-react-helmet="true"
+        property="og:image:secure_url">
+  <meta content="{{translate "head.og.url"}}" data-react-helmet="true" property="og:url">
+  <meta content="website" data-react-helmet="true" property="og:type">
+  <meta content="{{translate "head.og.siteName"}}" data-react-helmet="true" property="og:site_name">
+  <meta content="{{translate "head.og.locale"}}" data-react-helmet="true" property="og:locale">
+  <meta content="1540794322914494" data-react-helmet="true" property="fb:app_id">
+  <meta content="summary" data-react-helmet="true" name="twitter:card">
+  <meta content="{{translate "head.description.home"}}" data-react-helmet="true" name="twitter:description">
+  <meta content="{{translate "lkTitle"}}" data-react-helmet="true" name="twitter:title">
+  <meta content="{{translate "head.twitter"}}" data-react-helmet="true" name="twitter:creator">
+  <meta content="{{translate "head.twitter"}}" data-react-helmet="true" name="twitter:site">
+  <meta content="{{REACT_APP_GOOGLE_SITE_ID}}" data-react-helmet="true" name="google-site-verification">
+  <meta content="#DA532C" data-react-helmet="true" name="msapplication-TileColor">
+  <link href="https://lookiero.com" rel="alternate" data-react-helmet="true" hreflang="x-default">
+  <link href="{{REACT_APP_CDN_PATH}}/commons/fonts/aurora-iconfont/2.0.24/auroraicons.css" rel="stylesheet">
+  <script type="text/javascript">
+    window.Lookiero = {{{getGlobalConfig}}};
+  </script>
+</head>
+<body class="home-page">
+<div class="aurora">
+  {{{header}}}
+  {{{panel}}}
+  <div class="content">
+    {{> sticky-button}}
+    {{{home-intro}}}
+    {{{how-it-works}}}
+    {{{style-experts}}}
+    {{{inside}}}
+    {{{price}}}
+    {{{quiz-question}}}
+    {{{world-of-styles}}}
+    {{#unless (getCountryConfig "enableOneTrust")}}
+      {{{cookies-modal}}}
+    {{/unless}}
+  </div>
+  {{{footer}}}
+</div>
+
+<script async src="static/js/lookiero.{{buildVersionHash}}.js"></script>
+</body>
+</html>

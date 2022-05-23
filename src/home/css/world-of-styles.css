@@ -1,0 +1,60 @@
+.influencers-layout {
+  padding-top: var(--layout-m);
+}
+.influencers-layout__inner {
+  margin-right: var(--layout-s);
+  margin-left: var(--layout-s);
+}
+.influencers-layout-content,
+.influencers-subtitle-container {
+  width: calc(100% - calc(var(--layout-s) * 2));
+}
+.influencers-title-container {
+  margin-bottom: var(--layout-xxs);
+}
+.influencer-slider-first {
+  margin-left: var(--layout-m);
+}
+.influencer-card.influencer-slider-last {
+  margin-right: var(--layout-m);
+}
+.influencer-card {
+  width: calc(100% - 112px);
+  flex-shrink: 0;
+  margin-right: var(--layout-xs);
+}
+
+.avatar-wrapper {
+  min-width: var(--space-xl);
+  height: var(--space-xl);
+  margin-right: var(--space-s);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@media (min-width: 840px) {
+  .influencers-layout {
+    padding-top: var(--layout-l);
+  }
+  .influencers-layout__inner {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .influencers-layout__inner .influencers-slider.full-width {
+    max-width: 100%;
+  }
+  .influencers-layout-content,
+  .influencers-subtitle-container {
+    width: calc(100% - calc(var(--space-xxl) * 2));
+  }
+  .influencers-title-container {
+    margin-bottom: var(--layout-xs);
+  }
+  .influencer-card {
+    width: calc(22.22222vw - 32px);
+    margin-right: var(--layout-m);
+  }
+  .influencers-subtitle-box {
+    max-width: calc(1 / 3 * 100%);
+  }
+}

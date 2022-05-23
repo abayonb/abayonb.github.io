@@ -1,0 +1,22 @@
+.aurora .banner-info {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: var(--layout-xxs);
+  background-color: var(--color-info);
+
+  & .banner-info__text {
+    padding: var(--font-detail-2-padding);
+    letter-spacing: var(--font-detail-2-letter-spacing);
+    font: var(--font-detail-2);
+  }
+}
+
+.banner-info__modal {
+  & .modal-inner-scroll {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--layout-xxl);
+  }
+}

@@ -1,0 +1,9 @@
+<div class="image-container {{classes}}" style="padding-top: calc({{height}}/{{width}} * 100%);">
+  <img id="{{id}}" src="{{REACT_APP_CDN_PATH}}/commons/images/pixel.png" loading="lazy"
+    {{#if simpleLoad}}class="images lazyImage" 
+    {{else}}class="images lazyImage image--transition image--lazy {{easeIn}}"{{/if}}
+    {{#if height}}height="{{height}}" {{/if}}
+    {{#if width}}width="{{width}}" {{/if}}
+    {{#if onlyDesktop}}data-only-desktop="true" {{/if}}
+  />
+</div>
